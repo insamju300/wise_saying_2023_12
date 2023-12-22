@@ -5,18 +5,18 @@ import java.util.List;
 
 import com.ws.wiseSaying.entity.WiseSaying;
 
-public class WiseSayingRepository {
+public class WiseSayingRepository { //데이터의 보관 및 제어를 위한 클래스
 
-	private int lastWiseSayingId;
-	private List<WiseSaying> wiseSayings;
+	private int lastWiseSayingId; //시퀀스
+	private List<WiseSaying> wiseSayings; //명언 객체를 담기위한 컬렉션 
 
-	public WiseSayingRepository() {
+	public WiseSayingRepository() { //생성자
 
-		lastWiseSayingId = 0;
-		wiseSayings = new ArrayList<>();
+		lastWiseSayingId = 0; //시퀀스 초기값은 0으로 초기화
+		wiseSayings = new ArrayList<>(); //wiseSayings변수에 ArrayList 객체 생성하여 할당
 	}
 
-	public void remove(WiseSaying wiseSaying) {
+	public void remove(WiseSaying wiseSaying) { //명언 객체를 매
 		wiseSayings.remove(wiseSaying);
 	}
 
